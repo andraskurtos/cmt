@@ -1,0 +1,62 @@
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    font-family: "Arial";
+    font-weight: bold;
+    border: 1px solid #d3d3d3;
+    box-shadow: 0 4px 8px 0 #c0c0c0, 0 6px 20px 0 #c0c0c0;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 1s;
+    border-radius: 7px;
+    &:hover {
+        background-color: #dddddd;
+    }
+}
+
+.cline {
+    color: green;
+}
+
+.mline {
+    color: blue;
+}
+
+.tline {
+    color: red;
+}
+
+.grid {
+    align-self: center;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 80vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.row {
+
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    column-gap: 5px;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
