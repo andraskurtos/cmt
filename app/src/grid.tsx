@@ -17,7 +17,7 @@ export function Grid() {
     const [nextValue, setNextValue] = useState("c");
     const [lines, setLines] = useState(0);
     const values = ["c", "m", "t"];
-    console.log(lines);
+    
     const countLines = () => {
         let newLines = 0;
         let newLineGrid = lineGrid;
@@ -44,16 +44,14 @@ export function Grid() {
                     indexes[0] = [];
                     current[0] = "x";
                 }
+
                 if (counts[0] >= 3) {
                     if (counts[0] === 3) newLines++;
                     indexes[0].forEach((index) => {
                         newLineGrid[i][index] = true;
                  });
-                } else {
-                    counts[1] = 0;
-                    indexes[1] = [];
-                    current[1] = "x";
                 }
+                
                 // vertical lines
                 if (grid[j][i] !== "") {
                     if (grid[j][i].toLowerCase() === current[1]) {
@@ -64,6 +62,10 @@ export function Grid() {
                         indexes[1] = [j];
                         current[1] = grid[j][i].toLowerCase();
                     }                    
+                } else {
+                    counts[1] = 0;
+                    indexes[1] = [];
+                    current[1] = "x";
                 }
                 if (counts[1] >= 3) {
                     if (counts[1]===3) newLines++;
